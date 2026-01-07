@@ -16,10 +16,12 @@ return new class extends Migration
             $table->string('title');
             $table->string('cover_image');
             $table->text('description')->nullable();
+            $table->string('region');
             $table->string('author')->nullable();
             $table->string('artist')->nullable();
             $table->string('genre')->nullable();
-            $table->string('status');
+            $table->enum('status', ['ongoing', 'completed', 'hiatus'])->default('ongoing');
+            $table->enum('manga_type', ['manga', 'manhwa', 'manhua'])->default('manga');
             $table->date('release_date')->nullable();
             $table->timestamps();
         });

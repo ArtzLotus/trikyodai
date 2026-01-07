@@ -12,10 +12,12 @@ class Manga extends Model
         'title',
         'cover_image',
         'description',
+        'region',
         'author',
         'artist',
         'genre',
         'status',
+        'manga_type',
         'release_date',
     ];
 }
